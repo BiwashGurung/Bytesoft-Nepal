@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="CSS/nav.css"/>
   <link rel="stylesheet" href="CSS/styles.css"/>
   <link rel="icon" href="Images/Bytesoft_logo.png" type="image/x-icon"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -265,116 +267,70 @@
 
 
 
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section about">
+      <img src="Images/logo.png" alt="Bytesoft Nepal Logo" class="footer-logo" />
+      <p>
+        ByteSoft Nepal delivers exceptional IT solutions, focused on solving challenges and driving success. 
+        With a skilled team and a commitment to quality, we ensure every project meets your needs and exceeds expectations.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Services</h3>
+      <ul>
+        <li>Web Development</li>
+        <li>Mobile App Development</li>
+        <li>Graphic Designing</li>
+        <li>Digital Marketing</li>
+        <li>Search Engine Optimization</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Important Links</h3>
+      <ul>
+        <li>About Us</li>
+        <li>Services</li>
+        <li>Career</li>
+        <li>Privacy Policy</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Find Us At</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <ul class="contact-info">
+        <li><i class="fas fa-phone"></i> 9817189947</li>
+        <li><i class="fas fa-envelope"></i> info@bytesoftnepal.com</li>
+        <li><i class="fas fa-map-marker-alt"></i> Bajapatan-13, Pokhara</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    Copyright © 2025, All rights reserved - Bytesoft Nepal
+  </div>
+</footer>
 
 
 
 
-<!-- For Nav Bar -->
+
   <script>
-    // For Nav Bar
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      hamburger.classList.toggle('active');
-    });
-
-
-
-    // For slider of Services
-const slider = document.getElementById("slider");
-const cardsToShow = 3;
-const cardWidth = slider.children[0].offsetWidth + 20; // card + gap
-let currentSlide = 0;
-
-// Clone first few cards for infinite loop
-for (let i = 0; i < cardsToShow; i++) {
-  const clone = slider.children[i].cloneNode(true);
-  slider.appendChild(clone);
-}
-
-function moveSlide(step = 1) {
-  currentSlide += step;
-  slider.style.transition = "transform 0.5s ease";
-  slider.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
-
-  // Seamless jump back to original
-  if (currentSlide === slider.children.length - cardsToShow) {
-    setTimeout(() => {
-      slider.style.transition = "none";
-      currentSlide = 0;
-      slider.style.transform = `translateX(0)`;
-    }, 510); // Wait for transition to finish
-  }
-}
-
-// Auto move every 5 seconds
-setInterval(() => {
-  moveSlide(1);
-}, 5000);
-
-
-
 // For companies
 const logoTrack = document.getElementById("logoTrack");
     const logos = logoTrack.innerHTML;
     logoTrack.innerHTML += logos; // duplicate logos for seamless scroll
 
-
-
-// For stats animation
- function animateCounter(el, target, duration = 2000) {
-    let start = 0;
-    const stepTime = Math.abs(Math.floor(duration / target));
-    const counter = setInterval(() => {
-      start++;
-      el.textContent = start + '+';
-      if (start >= target) clearInterval(counter);
-    }, stepTime);
-  }
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const statNumbers = entry.target.querySelectorAll('.stat-number');
-        statNumbers.forEach(el => {
-          const target = +el.getAttribute('data-target');
-          animateCounter(el, target);
-        });
-        observer.unobserve(entry.target); 
-      }
-    });
-  }, {
-    threshold: 0.4 
-  });
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const section = document.querySelector('.why-choose-us');
-    observer.observe(section);
-  }); 
-  
-  
-
-
-// For testimonial carousel
-  const track = document.getElementById("carouselTrack");
-  const carousel = document.getElementById("carousel");
-  const cards = track.children;
-  let currentIndex = 0;
-  const total = cards.length;
-
-  function moveSlide(step = 1) {
-    currentIndex = (currentIndex + step + total) % total;
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
-  }
-
-  let interval = setInterval(moveSlide, 5000);
-
-  carousel.addEventListener("mouseenter", () => clearInterval(interval));
-  carousel.addEventListener("mouseleave", () => {
-    interval = setInterval(moveSlide, 5000);
-  });
   </script>
+  <script src="JS/nav.js"></script>
+  <script src="JS/services.js"></script>
+  <script src="JS/stats.js"></script>
+  <script src="JS/testo.js"></script>
 </body>
 </html>
