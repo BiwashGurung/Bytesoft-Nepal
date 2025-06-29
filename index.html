@@ -200,6 +200,59 @@
 </section>
   
 
+<section class="testimonial-section">
+  <h2>What Our Clients</h2>
+  <p>Hear from the people who trust us to bring their ideas to life.</p>
+
+  <div class="carousel-container" id="carousel">
+    <div class="carousel-track" id="carouselTrack">
+      <!-- CARD 1 -->
+      <div class="testimonial-card">
+        <div class="testimonial-logo">
+          <img src="Images/company-1.jpg" alt="Logo 1">
+        </div>
+        <div class="testimonial-content">
+          <div class="testimonial-date">June 12, 2025</div>
+          <div class="testimonial-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="testimonial-message">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed magna eget nibh in turpis.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="testimonial-card">
+        <div class="testimonial-logo">
+          <img src="Images/company-10.jpg" alt="Logo 2">
+        </div>
+        <div class="testimonial-content">
+          <div class="testimonial-date">May 20, 2025</div>
+          <div class="testimonial-title">Aenean eget lorem eget velit luctus congue.</div>
+          <div class="testimonial-message">
+            Maecenas ultrices, est sit amet luctus mattis, velit magna pretium sapien, sed blandit ligula nisl sed elit.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="testimonial-card">
+        <div class="testimonial-logo">
+          <img src="Images/company-12.jpg" alt="Logo 3">
+        </div>
+        <div class="testimonial-content">
+          <div class="testimonial-date">April 10, 2025</div>
+          <div class="testimonial-title">Donec posuere, nisl ut feugiat placerat.</div>
+          <div class="testimonial-message">
+            Proin nec ligula nec orci porta fermentum. Nullam tincidunt, sem eget malesuada tempor, libero sed turpis.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
 
 
@@ -288,7 +341,29 @@ const logoTrack = document.getElementById("logoTrack");
   document.addEventListener('DOMContentLoaded', () => {
     const section = document.querySelector('.why-choose-us');
     observer.observe(section);
-  });   
+  }); 
+  
+  
+
+
+// For testimonial carousel
+  const track = document.getElementById("carouselTrack");
+  const carousel = document.getElementById("carousel");
+  const cards = track.children;
+  let currentIndex = 0;
+  const total = cards.length;
+
+  function moveSlide(step = 1) {
+    currentIndex = (currentIndex + step + total) % total;
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  let interval = setInterval(moveSlide, 5000);
+
+  carousel.addEventListener("mouseenter", () => clearInterval(interval));
+  carousel.addEventListener("mouseleave", () => {
+    interval = setInterval(moveSlide, 5000);
+  });
   </script>
 </body>
 </html>
