@@ -1,4 +1,4 @@
-/* Base Styles */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -8,17 +8,21 @@
 body {
   font-family: 'Inter', sans-serif;
   color: white;
+  background-color: #000;
 }
 
+/* Navbar */
 .navbar {
-  position: sticky;
+  position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.3);
+  z-index: 2; 
+  /* background: rgba(0, 0, 0, 0.4); */
   backdrop-filter: blur(6px);
-  padding: 1.2rem 0;
+  padding: 1rem 0;
 }
+
 
 .container {
   max-width: 1200px;
@@ -51,7 +55,7 @@ body {
   color: #00d2c8;
 }
 
-/* Hamburger Menu */
+/* Hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -67,13 +71,77 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Mobile Styles */
+/* Hero */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: url('../Images/hero.png') no-repeat center center/cover;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 5%;
+  z-index: 0;
+}
+
+.hero-text {
+  max-width: 600px;
+  color: white;
+  text-align: left;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1.2rem;
+}
+
+.hero-text h1 span {
+  color: #00FCF7;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #00FCF7;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #00FCF7;
+  color: black;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
     top: 100%;
     right: 0;
-    background:#001129;
+    background: #001129;
     width: 100%;
     max-height: 0;
     overflow: hidden;
@@ -104,5 +172,23 @@ body {
 
   .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
   }
 }
