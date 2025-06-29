@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bytesoft Nepal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bytesoft Nepal</title>
+  <link rel="stylesheet" href="CSS/nav.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <img src="Images/logo.png" alt="Bytesoft Nepal" />
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Our Solutions</a></li>
+          <li><a href="#">Career</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section Placeholder -->
+  <section class="hero"></section>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
