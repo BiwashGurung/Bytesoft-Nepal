@@ -146,6 +146,7 @@
     </div>
   </section>
 
+  <!-- For Companies Section -->
 <section class="logo-section">
     <h2>Trusted by <span>50+</span> enterprises, scale-ups and startups.</h2>
     <p>At Bytesoft Nepal, we are proud to collaborate with some of the most dynamic and visionary companies in the tech industry. Whether it's established enterprises or emerging startups with big aspirations, they rely on our expertise and support to turn their ideas into reality.</p>
@@ -176,7 +177,27 @@
   </section>
 
 
-
+<!-- Why Choose Us Section -->
+<section class="why-choose-us">
+  <div class="why-choose-us-content">
+    <h2>Why to Choose Us</h2>
+    <p>Delivering value for our clients</p>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-number" data-target="250">0</div>
+        <div class="stat-label">PROJECTS <span>COMPLETED</span></div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" data-target="100">0</div>
+        <div class="stat-label">CUSTOMER <span>LOYALTY</span></div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" data-target="50">0</div>
+        <div class="stat-label">GLOBAL <span>CLIENTS</span></div>
+      </div>
+    </div>
+  </div>
+</section>
   
 
 
@@ -236,6 +257,38 @@ const logoTrack = document.getElementById("logoTrack");
     const logos = logoTrack.innerHTML;
     logoTrack.innerHTML += logos; // duplicate logos for seamless scroll
 
+
+
+// For stats animation
+ function animateCounter(el, target, duration = 2000) {
+    let start = 0;
+    const stepTime = Math.abs(Math.floor(duration / target));
+    const counter = setInterval(() => {
+      start++;
+      el.textContent = start + '+';
+      if (start >= target) clearInterval(counter);
+    }, stepTime);
+  }
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const statNumbers = entry.target.querySelectorAll('.stat-number');
+        statNumbers.forEach(el => {
+          const target = +el.getAttribute('data-target');
+          animateCounter(el, target);
+        });
+        observer.unobserve(entry.target); 
+      }
+    });
+  }, {
+    threshold: 0.4 
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('.why-choose-us');
+    observer.observe(section);
+  });   
   </script>
 </body>
 </html>
