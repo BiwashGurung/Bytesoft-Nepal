@@ -415,6 +415,7 @@ html {
       text-align: center;
       padding: 80px 20px;
       overflow: hidden;
+      background-attachment: fixed;
     }
 
     .why-choose-us::before {
