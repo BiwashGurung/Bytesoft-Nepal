@@ -49,7 +49,7 @@
     </div>
   </section>
 
-
+<!-- About Us  Section -->
 <section class="our-stories">
   <div class="stories-container">
     <div class="stories-heading">
@@ -73,12 +73,10 @@
       <!-- RIGHT SIDE: Text -->
       <div class="stories-text">
         <p>
-          At Bytesoft Nepal, we blend startup agility with enterprise-grade quality to empower businesses through innovative digital solutions. With over 50 global clients and 250+ successful projects under our belt, we specialize in crafting responsive websites, user-centered mobile apps, digital marketing strategies, SEO campaigns, and striking graphic designs—all driven by cutting-edge technology and a passion for excellence.
-        </p>
-        <p>
-          From our thorough discovery phase to seamless deployment and ongoing support, our team immerses itself in each client’s vision—strategizing, designing, developing, testing, and optimizing every step of the way. We prioritize transparency, performance, and scalability, ensuring every solution we deliver not only meets immediate needs but also supports long-term goals.
-        </p>
-        <p>
+          At Bytesoft Nepal, we blend startup agility with enterprise-grade quality to empower businesses through innovative digital solutions. With over 50 global clients and 250+ successful projects under our belt, we specialize in crafting responsive websites, user-centered mobile apps, digital marketing strategies, SEO campaigns, and striking graphic designs—all driven by cutting-edge technology and a passion for excellence.<br>
+      
+          From our thorough discovery phase to seamless deployment and ongoing support, our team immerses itself in each client’s vision—strategizing, designing, developing, testing, and optimizing every step of the way. We prioritize transparency, performance, and scalability, ensuring every solution we deliver not only meets immediate needs but also supports long-term goals.<br>
+       
           Our mission? To exceed expectations through quality, innovation, and collaboration—building trust-based partnerships that foster sustainable growth. Whether you’re a budding startup or an established enterprise, Bytesoft Nepal is your dedicated digital partner, committed to shaping your digital future—together.
         </p>
         <a href="#" class="btn-outline">More About Us →</a>
@@ -88,6 +86,65 @@
 </section>
 
 
+  <section class="services-section">
+    <div class="header-text">
+      <h1>Bring your vision to <span>life</span></h1>
+      <p>
+        Our primary purpose is to create top-notch applications while constantly learning and<br />
+        growing that not only meet but exceed our client's expectations
+      </p>
+    </div>
+
+    <div class="slider-wrapper">
+      <button class="nav prev" onclick="moveSlide(-1)">‹</button>
+      <div class="slider-container" id="slider">
+        <!-- Slide 1 -->
+        <div class="card">
+          <img src="Images/service-1.png" />
+          <h3>Digital Marketing</h3>
+          <p>We develop and run your social media platform to launch your business to the better future.</p>
+          <a href="#" style="text-decoration: none; color: #111; font-weight: 500;">Learn More&nbsp;<span>›</span></a>
+          <div class="card-footer">
+            
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="card">
+          <img src="Images/service-2.png" />
+          <h3>Graphics Design</h3>
+          <p>We employ an innovative, research-first design process to design the best UI/UX for your product.</p>
+          <a href="#" style="text-decoration: none; color: #111; font-weight: 500;">Learn More&nbsp;<span>›</span></a>
+          <div class="card-footer">
+     
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="card">
+          <img src="Images/service-3.png" />
+          <h3>Websites & Mobile App</h3>
+          <p>Dynamic, responsive, and cross-platform websites and apps built with cutting-edge technology.</p>
+                 <a href="#" style="text-decoration: none; color: #111; font-weight: 500;">Learn More&nbsp;<span>›</span></a>
+          <div class="card-footer">
+           
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="card">
+          <img src="Images/service-4.png" />
+          <h3>Search Engine Optimization</h3>
+          <p>Improve your website’s visibility and ranking on Google with proven SEO strategies.</p>
+                 <a href="#" style="text-decoration: none; color: #111; font-weight: 500;">Learn More&nbsp;<span>›</span></a>
+          <div class="card-footer">
+            
+          </div>
+        </div>
+      </div>
+      <button class="nav next" onclick="moveSlide(1)">›</button>
+    </div>
+  </section>
 
 
 
@@ -104,6 +161,43 @@
       navLinks.classList.toggle('active');
       hamburger.classList.toggle('active');
     });
+
+
+
+const slider = document.getElementById("slider");
+const cardsToShow = 3;
+const cardWidth = slider.children[0].offsetWidth + 20; // card + gap
+let currentSlide = 0;
+
+// Clone first few cards for infinite loop
+for (let i = 0; i < cardsToShow; i++) {
+  const clone = slider.children[i].cloneNode(true);
+  slider.appendChild(clone);
+}
+
+function moveSlide(step = 1) {
+  currentSlide += step;
+  slider.style.transition = "transform 0.5s ease";
+  slider.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
+
+  // Seamless jump back to original
+  if (currentSlide === slider.children.length - cardsToShow) {
+    setTimeout(() => {
+      slider.style.transition = "none";
+      currentSlide = 0;
+      slider.style.transform = `translateX(0)`;
+    }, 510); // Wait for transition to finish
+  }
+}
+
+// Auto move every 5 seconds
+setInterval(() => {
+  moveSlide(1);
+}, 5000);
+
+
+
+
   </script>
 </body>
 </html>

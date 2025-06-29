@@ -8,13 +8,14 @@
 body {
   font-family: 'Inter', sans-serif;
   color: white;
-  background-color: #000;
+  background-color: #fff;
 }
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
+/* HOmePAge - About Section */
 /* Section Styling */
 .our-stories {
   background: white;
@@ -176,6 +177,8 @@ html {
 
   .stories-text p {
     font-size: 0.95rem;
+    margin-top: 40%;
+ 
   }
 
   .right-images {
@@ -184,5 +187,132 @@ html {
 
   .right-images img {
     width: 100%;
+  }
+}
+
+
+
+
+
+/* HomePAge - Services Section */
+
+.services-section {
+  max-width: 1300px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.header-text {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header-text h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.header-text h1 span {
+  color: #d32f2f;
+}
+
+.header-text p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-container {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+  padding: 30px;
+  width: calc(100% / 3 - 14px);
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.card-footer {
+  background: #fafafa;
+  margin: -30px;
+  margin-top: 20px;
+  padding: 20px 30px;
+  border-radius: 0 0 16px 16px;
+}
+
+.card-footer a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.card-footer span {
+  font-size: 1.1rem;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  color: #333;
+  padding: 10px;
+}
+
+.nav.prev {
+  left: 0;
+}
+
+.nav.next {
+  right: 0;
+}
+
+@media (max-width: 992px) {
+  .card {
+    width: 100%;
+  }
+
+  .slider-container {
+    flex-wrap: nowrap;
   }
 }
