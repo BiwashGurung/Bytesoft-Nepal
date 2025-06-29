@@ -85,7 +85,7 @@
   </div>
 </section>
 
-
+<!-- Services Section -->
   <section class="services-section">
     <div class="header-text">
       <h1>Bring your vision to <span>life</span></h1>
@@ -146,6 +146,38 @@
     </div>
   </section>
 
+<section class="logo-section">
+    <h2>Trusted by <span>50+</span> enterprises, scale-ups and startups.</h2>
+    <p>At Bytesoft Nepal, we are proud to collaborate with some of the most dynamic and visionary companies in the tech industry. Whether it's established enterprises or emerging startups with big aspirations, they rely on our expertise and support to turn their ideas into reality.</p>
+
+    <div class="logo-carousel">
+      <div class="logo-track" id="logoTrack">
+        <!-- Original Logos -->
+        <img src="Images/company-1.jpg" alt="Logo 1">
+        <img src="Images/company-2.jpg" alt="Logo 2">
+        <img src="Images/company-3.png" alt="Logo 3">
+        <img src="Images/company-4.jpg" alt="Logo 4">
+        <img src="Images/company-5.jpg" alt="Logo 5">
+        <img src="Images/company-6.png" alt="Logo 6">
+        <img src="Images/company-7.jpg" alt="Logo 7">
+        <img src="Images/company-9.jpg" alt="Logo 8">
+        <img src="Images/company-10.jpg" alt="Logo 9">
+        <img src="Images/company-11.jpg" alt="Logo 10">
+        <img src="Images/company-12.jpg" alt="Logo 11">
+        <img src="Images/company-13.jpg" alt="Logo 12">
+        <img src="Images/company-14.jpg" alt="Logo 13">
+        <img src="Images/company-15.jpg" alt="Logo 14">
+        <img src="Images/company-16.jpg" alt="Logo 15">
+        <img src="Images/company-17.jpg" alt="Logo 16">
+        <img src="Images/company-18.png" alt="Logo 17">
+        <img src="Images/company-19.jpg" alt="Logo 18">
+      </div>
+    </div>
+  </section>
+
+
+
+  
 
 
 
@@ -154,6 +186,7 @@
 
 <!-- For Nav Bar -->
   <script>
+    // For Nav Bar
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
 
@@ -164,6 +197,7 @@
 
 
 
+    // For slider of Services
 const slider = document.getElementById("slider");
 const cardsToShow = 3;
 const cardWidth = slider.children[0].offsetWidth + 20; // card + gap
@@ -197,6 +231,10 @@ setInterval(() => {
 
 
 
+// For companies
+const logoTrack = document.getElementById("logoTrack");
+    const logos = logoTrack.innerHTML;
+    logoTrack.innerHTML += logos; // duplicate logos for seamless scroll
 
   </script>
 </body>
