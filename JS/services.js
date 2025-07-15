@@ -29,8 +29,8 @@
   // Attach to buttons
   window.moveServiceSlide = moveServiceSlide;
 
-  // Auto move every 5 seconds
+  // Auto move every 3 seconds
   setInterval(() => {
     moveServiceSlide(1);
-  }, 5000);
+  }, 3000);
 })();
