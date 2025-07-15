@@ -77,10 +77,141 @@ html {
   transition: all 0.3s ease;
 }
 
+
+
+
+
+/* Dropdown Wrapper */
+.dropdown {
+  position: relative;
+}
+
+/* Show on hover */
+.dropdown:hover .solution-modal {
+  display: block;
+}
+
+/* Modal container */
+.solution-modal {
+  position: absolute;
+  top: 100%;
+  /* left: -100%; */
+  transform: translateX(-65%);
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  width: 1100px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 999;
+}
+
+/* Grid layout */
+.solution-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1rem;
+}
+
+/* Light card styling */
+.solution-item.light {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.solution-item.light img {
+  width: 80px;
+  height: 80px;
+}
+.solution-item.light:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.solution-item.light h4 {
+  margin: 0;
+  font-size: 1rem;
+  color:#000;
+}
+
+.solution-item.light p {
+  font-size: 0.9rem;
+  margin: 0.4rem 0;
+  color: #000;
+  text-align: left;
+}
+
+.solution-item.light a {
+  color: #000;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.solution-item.light a:hover {
+  text-decoration: underline;
+}
+
+/* Dark card (spanning 2 rows) */
+.solution-item.dark {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  background: #03132a;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.solution-item.dark h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.solution-item.dark p {
+  font-size: 0.95rem;
+}
+
+.solution-item.dark small {
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+.solution-item.dark a {
+  margin-top: 1rem;
+  background: #00FCF7;
+  color: #000;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.solution-item.dark a:hover {
+  background: #00d2c8;
+}
+
+
+
+
+
+
+
+
+
+
 /* Hero */
 .hero {
   position: relative;
-  height: 105vh;
+  height: 10vh;
   width: 100vw;
   background: url('../Images/hero.png') no-repeat center center/cover;
   /* display: flex;
