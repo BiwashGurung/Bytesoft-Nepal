@@ -160,7 +160,7 @@ html {
 .solution-item.dark {
   grid-column: 3;
   grid-row: 1 / span 2;
-  background: #03132a;
+  background: url('../Images/whychooseus_banner.png') no-repeat center center/cover;
   color: white;
   padding: 1.5rem;
   border-radius: 10px;
@@ -170,33 +170,42 @@ html {
 }
 
 .solution-item.dark h4 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+ 
 }
 
 .solution-item.dark p {
-  font-size: 0.95rem;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: -10% !important;
+  text-align: left;
 }
 
 .solution-item.dark small {
-  font-size: 0.8rem;
+  font-size: 14px;
+  font-weight: 400;
   color: #ccc;
-  margin-top: 0.5rem;
+  margin-top: -10% !important;
+
 }
 
 .solution-item.dark a {
-  margin-top: 1rem;
-  background: #00FCF7;
-  color: #000;
+  margin-left: 4.5rem;
+  margin-bottom: 2rem;
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid white;
   padding: 0.6rem 1rem;
-  border-radius: 6px;
+  border-radius: 2px;
   text-decoration: none;
   font-weight: 500;
   width: fit-content;
 }
 
 .solution-item.dark a:hover {
-  background: #00d2c8;
+  background: #111111;
+  border: 1px solid  #00FCF7;
+  color: #00FCF7;
 }
 
 
