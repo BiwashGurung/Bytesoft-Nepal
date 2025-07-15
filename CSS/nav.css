@@ -220,9 +220,9 @@ html {
 /* Hero */
 .hero {
   position: relative;
-  height: 10vh;
+  height: 105vh;
   width: 100vw;
-  background: url('../Images/hero.png') no-repeat center center/cover;
+  background: url('../Images/hero.png') no-repeat center center/cover ;
   /* display: flex;
   align-items: center;
   justify-content: center; */
