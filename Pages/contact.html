@@ -2,16 +2,191 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bytesoft Nepal</title>
-  <link rel="stylesheet" href="../CSS/nav.css"/>
-  <link rel="stylesheet" href="../CSS/styles.css"/>
-  <link rel="icon" href="../Images/Bytesoft_logo.png" type="image/x-icon"/>
+  <link rel="stylesheet" href="../CSS/nav.css" />
+  <link rel="stylesheet" href="../CSS/styles.css" />
+  <link rel="icon" href="../Images/Bytesoft_logo.png" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    .hero {
+      background: url('../Images/contact.jpg') no-repeat center center/cover;
+      height: 110vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+      background-blend-mode: overlay;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 600px;
+    }
+
+    .contact-section {
+      padding: 60px 20px;
+      background: #f9f9f9;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-section p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .contact-box-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 40px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+    }
+
+    .contact-box-left {
+      flex: 1;
+      background: #001129;
+      color: #fff;
+      padding: 40px;
+      border-radius: 12px;
+    }
+
+    .contact-box-left h3 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    .contact-box-left p {
+      margin: 15px 0;
+      display: flex;
+      color: #fff;
+      align-items: center;
+      font-size: 1rem;
+      gap: 10px;
+      line-height: 2.6;
+    }
+
+    .contact-box-left i {
+      margin-right: 10px;
+      color: #00fefc;
+    }
+
+    .contact-box-left a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .career-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: transparent;
+      border: 1px solid #00FCF7;
+      color: #00FCF7 !important;
+      font-weight: 600;
+      border-radius: 2px;
+      text-decoration: none;
+    }
+    .career-btn:hover {
+      background: #00FCF7;
+      color: #03132a !important;
+      transition: 2s ease-in-out;
+    } 
+
+    .contact-box-right {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .form-grid input,
+    .form-grid textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #f9f9f9;
+    }
+
+    .form-grid textarea {
+      grid-column: span 2;
+      resize: none;
+    }
+
+    .form-grid button {
+      grid-column: span 2;
+      padding: 14px 0;
+      background-color: #03132a;
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .form-grid button:hover {
+      background-color: #00fefc;
+      color: #03132a;
+    }
+
+    iframe {
+      width: 100%;
+      border: 0;
+      height: 350px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-box-wrapper {
+        flex-direction: column;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-grid textarea,
+      .form-grid button {
+        grid-column: span 1;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
@@ -77,8 +252,8 @@
   </div>
 </li>
           <li><a href="career.html">Career</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html" style="color: #00FCF7; border-bottom: 2px solid #00FCF7; font-weight: 700;"> Contact</a></li>
+          <li><a href="about.html" style="color: #00FCF7; border-bottom: 2px solid #00FCF7; font-weight: 700;">About Us</a></li>
+          <li><a href="contact.html" > Contact</a></li>
         </ul>
       </nav>
       <div class="hamburger" id="hamburger">
@@ -90,15 +265,48 @@
   </header>
   <!---- Nav Bar section ends --> 
 
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>Let's build together</h1>
+      <p>Whether you're launching a startup or growing your business, we're here to help. Reach out and we'll be in touch soon.</p>
+    </div>
+  </section>
 
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Tell us a little about yourself, your project, and the best way to reach you.<br>Our team is ready to assist you and we will get back to you promptly.</p>
 
+    <div class="contact-box-wrapper">
+      <div class="contact-box-left">
+        <h3>Let's build together</h3>
+        <p><i class="fas fa-phone"></i> <a href="tel:+9779817189947">9817189947</a></p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:info@bytesoftnepal.com">info@bytesoftnepal.com</a></p>
+        <p><i class="fas fa-map-marker-alt"></i> Amarsingh Chowk, Kundahar Chowk, Pokhara -12</p>
+        <a href="career.html" class="career-btn">Career at Bytesoft Nepal >></a>
+      </div>
 
+      <div class="contact-box-right">
+        <form class="form-grid">
+          <input type="text" placeholder="Full Name" required>
+          <input type="text" placeholder="Company Name">
+          <input type="email" placeholder="Email Address" required>
+          <input type="text" placeholder="Phone Number">
+          <textarea placeholder="Write your message here..." rows="5"></textarea>
+          <button type="submit">Send a Message</button>
+        </form>
+      </div>
+    </div>
 
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4335.3913893869185!2d84.00421180246143!3d28.204066111340985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39959793cb78dced%3A0x543edf32f8988942!2sBytesoft%20Nepal!5e0!3m2!1sen!2snp!4v1752565570857!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
 
+ 
   <footer class="footer">
   <div class="footer-container">
     <div class="footer-section about">
-      <img src="Images/logo.png" alt="Bytesoft Nepal Logo" class="footer-logo" />
+      <img src="../Images/logo.png" alt="Bytesoft Nepal Logo" class="footer-logo" />
       <p>
         ByteSoft Nepal delivers exceptional IT solutions, focused on solving challenges and driving success. 
         With a skilled team and a commitment to quality, we ensure every project meets your needs and exceeds expectations.
@@ -166,26 +374,15 @@
 
 
 
-
-  <script>
-// For companies
-const logoTrack = document.getElementById("logoTrack");
-    const logos = logoTrack.innerHTML;
-    logoTrack.innerHTML += logos; // duplicate logos for seamless scroll
-
-  </script>
+  <!-- JS Files -->
   <script src="JS/nav.js"></script>
   <script src="JS/services.js"></script>
   <script src="JS/stats.js"></script>
   <script src="JS/testo.js"></script>
   <script src="JS/gotoup.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 800, // animation duration
-    once: true,    // animate only once
-  });
-</script>
-
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
 </body>
 </html>
