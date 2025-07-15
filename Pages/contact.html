@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bytesoft Nepal</title>
+  <link rel="stylesheet" href="../CSS/nav.css"/>
+  <link rel="stylesheet" href="../CSS/styles.css"/>
+  <link rel="icon" href="../Images/Bytesoft_logo.png" type="image/x-icon"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <img src="../Images/logo.png" alt="Bytesoft Nepal" />
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#">Our Solutions</a></li>
+          <li><a href="#">Career</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="contact.html" style="color: #00FCF7; border-bottom: 2px solid #00FCF7; font-weight: 700;"> Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+  <!---- Nav Bar section ends --> 
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay">
+      <div class="hero-text" data-aos="fade-up" data-aos-delay="200" data-aos-offset="150">
+        <h1>Empowering your business with <span>innovative</span> digital solutions</h1>
+        <p>
+          We empower businesses to envision and craft the digital experiences of the future.
+          Our success is built on blending startup agility with enterprise-level excellence,
+          fostering collaboration every step of the way.
+        </p>
+        <a href="#" class="cta-button">Get in Touch →</a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section about">
+      <img src="Images/logo.png" alt="Bytesoft Nepal Logo" class="footer-logo" />
+      <p>
+        ByteSoft Nepal delivers exceptional IT solutions, focused on solving challenges and driving success. 
+        With a skilled team and a commitment to quality, we ensure every project meets your needs and exceeds expectations.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Services</h3>
+      <ul>
+        <li>Web Development</li>
+        <li>Mobile App Development</li>
+        <li>Graphic Designing</li>
+        <li>Digital Marketing</li>
+        <li>Search Engine Optimization</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Important Links</h3>
+      <ul>
+        <li>About Us</li>
+        <li>Services</li>
+        <li>Career</li>
+        <li>Privacy Policy</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Find Us At</h3>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61567820104842" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/company/bytesoft-nepal/posts/?feedView=all" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <!-- <a href="#"><i class="fab fa-instagram"></i></a> -->
+      </div>
+<ul class="contact-info">
+  <li>
+    <i class="fas fa-phone"></i>
+    <a href="tel:+9779817189947" style="text-decoration: none; color: white;">9817189947</a>
+  </li>
+  <li>
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:info@bytesoftnepal.com" style="text-decoration: none; color: white;">info@bytesoftnepal.com</a>
+  </li>
+  <li>
+    <i class="fas fa-map-marker-alt"></i>
+    <a href="https://maps.app.goo.gl/K4DEuFBGxcMnogPAA" target="_blank" style="text-decoration: none; color: white;">
+      Amarsingh, Kundahar Chowk, Pokhara -12
+    </a>
+  </li>
+</ul>
+
+
+    </div>
+  </div>
+  <div class="footer-bottom">
+    Copyright © 2025, All rights reserved - Bytesoft Nepal
+  </div>
+</footer>
+
+
+    <!-- Go to Top Button -->
+    <button id="goToTopButton" class="go-to-top" aria-label="Go to top" onclick="scrollToTop()" style="display: none; position: fixed; bottom: 90px; right: 30px; background-color: #E6F0E3; border: none; border-radius: 50%; width: 40px; height: 40px; margin: 0; padding: 0;">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+
+
+  <script>
+// For companies
+const logoTrack = document.getElementById("logoTrack");
+    const logos = logoTrack.innerHTML;
+    logoTrack.innerHTML += logos; // duplicate logos for seamless scroll
+
+  </script>
+  <script src="JS/nav.js"></script>
+  <script src="JS/services.js"></script>
+  <script src="JS/stats.js"></script>
+  <script src="JS/testo.js"></script>
+  <script src="JS/gotoup.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800, // animation duration
+    once: true,    // animate only once
+  });
+</script>
+
+</body>
+</html>
