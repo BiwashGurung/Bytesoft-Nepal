@@ -11,7 +11,38 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
 
+    .hero {
+      background: url('../Images/contact.jpg') no-repeat center center/cover;
+      height: 110vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+      background-blend-mode: overlay;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 600px;
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
@@ -90,18 +121,11 @@
   </header>
   <!---- Nav Bar section ends --> 
 
-  <!-- Hero Section -->
+ <!-- Hero Section -->
   <section class="hero">
-    <div class="overlay">
-      <div class="hero-text" data-aos="fade-up" data-aos-delay="200" data-aos-offset="150">
-        <h1>Empowering your business with <span>innovative</span> digital solutions</h1>
-        <p>
-          We empower businesses to envision and craft the digital experiences of the future.
-          Our success is built on blending startup agility with enterprise-level excellence,
-          fostering collaboration every step of the way.
-        </p>
-        <a href="#" class="cta-button">Get in Touch →</a>
-      </div>
+    <div>
+      <h1>Let's build together</h1>
+      <p>Whether you're launching a startup or growing your business, we're here to help. Reach out and we'll be in touch soon.</p>
     </div>
   </section>
 
@@ -111,7 +135,7 @@
   <footer class="footer">
   <div class="footer-container">
     <div class="footer-section about">
-      <img src="Images/logo.png" alt="Bytesoft Nepal Logo" class="footer-logo" />
+      <img src="../Images/logo.png" alt="Bytesoft Nepal Logo" class="footer-logo" />
       <p>
         ByteSoft Nepal delivers exceptional IT solutions, focused on solving challenges and driving success. 
         With a skilled team and a commitment to quality, we ensure every project meets your needs and exceeds expectations.
