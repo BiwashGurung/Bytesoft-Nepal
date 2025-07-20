@@ -30,6 +30,8 @@
       padding: 0 20px;
       background-blend-mode: overlay;
       background-color: rgba(0, 0, 0, 0.5);
+      position: relative;
+      margin-bottom:  7%;
     }
 
     .hero h1 {
@@ -46,6 +48,72 @@
       max-width: 1000px;
       letter-spacing: 2px;
       margin-bottom: 35px;
+    }
+
+    .floating-info {
+      position: absolute;
+      bottom: -195px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+      z-index: 10;
+      width: 90%;
+      justify-content: center;
+      flex-wrap: wrap;
+
+    }
+
+    .info-card {
+      background: white;
+      padding: 25px 20px;
+      border-radius: 15px;
+      width: 300px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .info-icon {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 15px;
+    }
+
+    .info-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #0D0D0D;
+      font-weight: 600;
+    }
+
+    .info-card p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .info-card:hover {
+      transform: translateX(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+
+     
+    }
+
+
+
+
+    @media screen and (max-width: 900px) {
+      .floating-info {
+        flex-direction: column;
+        align-items: center;
+        bottom: -90px;
+      }
+
+      .info-card {
+        width: 90%;
+        max-width: 360px;
+      }
     }
 
 
@@ -147,6 +215,26 @@
        <a href="../Pages/contact.html" class="cta-button">Get in Touch →</a>
     </div>
   </section>
+
+  
+  <div class="floating-info">
+    <div class="info-card" data-aos="zoom-in">
+      <img src="../Images/vision.png" alt="Vision Icon" class="info-icon" />
+      <h3>Our Vision</h3>
+      <p>To be a leader in the IT industry, recognized for our innovation and reliability. We aim to transform businesses by shaping the future of technology.</p>
+    </div>
+    <div class="info-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="../Images/mission.png" alt="Mission Icon" class="info-icon" />
+      <h3>Our Mission</h3>
+      <p>To deliver innovative IT solutions that drive business success through cutting-edge technology and collaboration. We are committed to exceeding client expectations with quality and service.</p>
+    </div>
+    <div class="info-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="../Images/goal.png" alt="Goal Icon" class="info-icon" />
+      <h3>Our Goal</h3>
+      <p>To continuously innovate and provide top-notch IT solutions, fostering growth for our clients and establishing long-term partnerships built on trust and excellence.</p>
+    </div>
+  </div>
+
 
 
 
