@@ -46,6 +46,132 @@
       letter-spacing: 2px;
       margin-bottom: 35px;
     }
+
+
+        .job-section {
+      background: url('your-image-path/job-section-bg.png') no-repeat center center/cover;
+      padding: 80px 20px;
+    }
+
+    .job-container {
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .job-heading {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #000;
+    }
+
+    .job-subheading {
+      font-size: 1.1rem;
+      color: #333;
+      max-width: 850px;
+      margin: 15px auto 50px;
+    }
+
+    .job-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .job-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      padding: 25px 30px;
+      max-width: 500px;
+      flex: 1 1 400px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .job-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .job-card h3 {
+      margin: 0 0 5px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #000;
+      text-align: left;
+    }
+
+    .job-card .level {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 8px;
+      text-align: left;
+    }
+
+    .job-card .desc {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #444;
+      text-align: left;
+    }
+
+    .job-card hr {
+      margin: 15px 0;
+      border: none;
+      border-top: 1px solid #eee;
+    }
+
+    .job-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .job-info span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #032A63;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .apply-now {
+      position: absolute;
+      padding: 6px 12px;
+      background: #032A63;
+      color: #fff;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      pointer-events: none;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: 0.2s ease;
+      z-index: 100;
+      white-space: nowrap;
+    }
+
+    @media screen and (max-width: 600px) {
+      .job-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -137,54 +263,54 @@
   </section>
 
 
-<!-- Job Listings Section -->
-<!-- Job Openings Section -->
-<section class="job-section" style="background: url('../Images/job-section-bg.png') no-repeat center center/cover; padding: 80px 20px;">
-  <div style="max-width: 1200px; margin: auto;">
-    <h2 style="text-align: center; font-size: 2rem; font-weight: 700; color: #000;">Turning Your Ideas into Digital Innovation</h2>
-    <p style="text-align: center; max-width: 850px; margin: 15px auto 50px; font-size: 1.1rem; color: #333;">
-      Your ideas have the power to create lasting impact. Join our team and work on projects that make a difference globally. From cutting-edge technology to innovative solutions, your creativity can help shape a better digital future.
-    </p>
 
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-      <!-- Job Card 1 -->
-      <div style="background: #fff; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); padding: 25px 30px; max-width: 500px; flex: 1 1 400px; position: relative;">
-        <h3 style="margin-top: 0; margin-bottom: 5px; font-size: 1.2rem; font-weight: 600;">Full Stack Developer</h3>
-        <p style="font-size: 0.9rem; margin-bottom: 8px; color: #555;"><i class="fas fa-user-tie" style="margin-right: 5px;"></i>Senior Level</p>
-        <p style="font-size: 0.95rem; line-height: 1.5; color: #444;">
-          Lead and execute creative projects, overseeing design strategy and team collaboration. Play a crucial role in crafting innovative, visually impactful designs that meet client needs and elevate their brand presence.
-        </p>
-        <hr style="margin: 15px 0;">
-        <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: #555;">
-          <span><i class="fas fa-user" style="margin-right: 5px;"></i>1</span>
-          <span><i class="fas fa-map-marker-alt" style="margin-right: 5px;"></i>Pokhara</span>
-          <span><i class="fas fa-calendar-alt" style="margin-right: 5px;"></i>Apply Before : 08 Jul, 2025</span>
-        </div>
-        <div style="position: absolute; top: 20px; right: 20px;">
-          <span style="background-color: #032A63; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 500;">Full Time(Onsite)</span>
-        </div>
-      </div>
 
-      <!-- Job Card 2 -->
-      <div style="background: #fff; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); padding: 25px 30px; max-width: 500px; flex: 1 1 400px; position: relative;">
-        <h3 style="margin-top: 0; margin-bottom: 5px; font-size: 1.2rem; font-weight: 600;">Graphics Designer</h3>
-        <p style="font-size: 0.9rem; margin-bottom: 8px; color: #555;"><i class="fas fa-user-tie" style="margin-right: 5px;"></i>Senior Level</p>
-        <p style="font-size: 0.95rem; line-height: 1.5; color: #444;">
-          Lead and drive end-to-end development projects, balancing front-end and back-end requirements to deliver cohesive, high-performance applications. Play a vital role in building scalable, efficient, and secure solutions that align with client goals.
-        </p>
-        <hr style="margin: 15px 0;">
-        <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: #555;">
-          <span><i class="fas fa-user" style="margin-right: 5px;"></i>1</span>
-          <span><i class="fas fa-map-marker-alt" style="margin-right: 5px;"></i>Pokhara</span>
-          <span><i class="fas fa-calendar-alt" style="margin-right: 5px;"></i>Apply Before : 08 Jul, 2025</span>
+  <!-- Job Openings Section -->
+  <section class="job-section">
+    <div class="job-container">
+      <h2 class="job-heading" data-aos="fade-up">Turning Your Ideas into Digital Innovation</h2>
+      <p class="job-subheading" data-aos="fade-up" data-aos-delay="100">
+        Your ideas have the power to create lasting impact. Join our team and work on projects that make a difference globally. From cutting-edge technology to innovative solutions, your creativity can help shape a better digital future.
+      </p>
+
+      <div class="job-cards">
+        <!-- Job Card 1 -->
+        <div class="job-card" data-aos="fade-up" data-aos-delay="200">
+          <h3>Full Stack Developer</h3>
+          <p class="level"><i class="fas fa-user-tie"></i> Senior Level</p>
+          <p class="desc">
+            Lead and execute creative projects, overseeing design strategy and team collaboration. Play a crucial role in crafting innovative, visually impactful designs that meet client needs and elevate their brand presence.
+          </p>
+          <hr />
+          <div class="job-info">
+            <span><i class="fas fa-user"></i> 1</span>
+            <span><i class="fas fa-map-marker-alt"></i> Pokhara</span>
+            <span><i class="fas fa-calendar-alt"></i> Apply Before : 08 Jul, 2025</span>
+          </div>
+          <div class="badge">Full Time(Onsite)</div>
+          <div class="apply-now">Apply Now</div>
         </div>
-        <div style="position: absolute; top: 20px; right: 20px;">
-          <span style="background-color: #032A63; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 500;">Full Time(Onsite)</span>
+
+        <!-- Job Card 2 -->
+        <div class="job-card" data-aos="fade-up" data-aos-delay="300">
+          <h3>Graphics Designer</h3>
+          <p class="level"><i class="fas fa-user-tie"></i> Senior Level</p>
+          <p class="desc">
+            Lead and drive end-to-end development projects, balancing front-end and back-end requirements to deliver cohesive, high-performance applications. Play a vital role in building scalable, efficient, and secure solutions that align with client goals.
+          </p>
+          <hr />
+          <div class="job-info">
+            <span><i class="fas fa-user"></i> 1</span>
+            <span><i class="fas fa-map-marker-alt"></i> Pokhara</span>
+            <span><i class="fas fa-calendar-alt"></i> Apply Before : 08 Jul, 2025</span>
+          </div>
+          <div class="badge">Full Time(Onsite)</div>
+          <div class="apply-now">Apply Now</div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
 
 
 <!-- Hiring Process Section -->
@@ -319,25 +445,28 @@
 
 
 
+  <!-- AOS and Hover Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-// For companies
-const logoTrack = document.getElementById("logoTrack");
-    const logos = logoTrack.innerHTML;
-    logoTrack.innerHTML += logos; // duplicate logos for seamless scroll
+    AOS.init();
 
+    document.querySelectorAll('.job-card').forEach(card => {
+      const applyText = card.querySelector('.apply-now');
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        applyText.style.left = x + 'px';
+        applyText.style.top = y + 'px';
+        applyText.style.opacity = 1;
+        applyText.style.transform = 'scale(1)';
+      });
+      card.addEventListener('mouseleave', () => {
+        applyText.style.opacity = 0;
+        applyText.style.transform = 'scale(0.8)';
+      });
+    });
   </script>
-  <script src="JS/nav.js"></script>
-  <script src="JS/services.js"></script>
-  <script src="JS/stats.js"></script>
-  <script src="JS/testo.js"></script>
-  <script src="JS/gotoup.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 800, // animation duration
-    once: true,    // animate only once
-  });
-</script>
 
 </body>
 </html>
