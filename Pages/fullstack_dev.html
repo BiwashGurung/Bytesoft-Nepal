@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bytesoft Nepal</title>
+    <link rel="stylesheet" href="../CSS/nav.css" />
+    <link rel="stylesheet" href="../CSS/styles.css" />
+    <link rel="icon" href="../Images/Bytesoft_logo.png" type="image/x-icon" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background-color: #fff;
+        color: #333;
+      }
+
+      .hero {
+        background: url("../Images/graphics_design.png") no-repeat center center/cover;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding: 0 20px;
+        background-blend-mode: overlay;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: relative;
+        background-attachment: fixed;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        margin-top: 11%;
+       
+      }
+
+      .hero p {
+        font-size: 1.3rem;
+        max-width: 1300px;
+        letter-spacing: 2px;
+        margin-bottom: 35px;
+      }
+
+      
+
+  @media (max-width: 768px) {
+    .career-details div {
+      padding: 20px !important;
+    }
+
+    .career-details ul {
+      padding-left: 18px !important;
+    }
+
+    .career-details .job-meta span {
+      flex: 1 1 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="container">
+        <div class="logo">
+          <img src="../Images/logo.png" alt="Bytesoft Nepal" />
+        </div>
+        <nav class="nav-links" id="navLinks">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="../index.html"
+                >Our Solutions <i class="fas fa-caret-down"></i
+              ></a>
+
+              <!-- Dropdown Modal -->
+              <div class="solution-modal">
+                <div class="solution-grid">
+                  <!-- 4 Light Cards -->
+                  <div class="solution-item light">
+                    <img src="../Images/service-1.png" alt="" />
+                    <div>
+                      <h4>Digital Marketing</h4>
+                      <p>
+                        We develop and run your social media platform to launch
+                        your business to the better future.
+                      </p>
+                      <a href="#">Learn More →</a>
+                    </div>
+                  </div>
+
+                  <div class="solution-item light">
+                    <img
+                      src="../Images/service-2.png"
+                      alt="Graphics Designing"
+                    />
+                    <div>
+                      <h4>Graphics Designing</h4>
+                      <p>
+                        We employ an innovative, research-first design process
+                        to design the best UI/UX for your product.
+                      </p>
+                      <a href="#">Learn More →</a>
+                    </div>
+                  </div>
+
+                  <div class="solution-item light">
+                    <img
+                      src="../Images/service-4.png"
+                      alt="Search Engine Optimization"
+                    />
+                    <div>
+                      <h4>Search Engine Optimization</h4>
+                      <p>
+                        We plan targeted SEO Campaigns that drive maximum
+                        traffic, leads and sales.
+                      </p>
+                      <a href="#">Learn More →</a>
+                    </div>
+                  </div>
+
+                  <div class="solution-item light">
+                    <img
+                      src="../Images/service-3.png"
+                      alt="Website & Mobile App"
+                    />
+                    <div>
+                      <h4>Website & Mobile App</h4>
+                      <p>
+                        Dynamic, responsive, and cross-platform websites and
+                        apps built with cutting-edge technology.
+                      </p>
+                      <a href="#">Learn More →</a>
+                    </div>
+                  </div>
+
+                  <!-- Right Large Dark Box -->
+                  <div class="solution-item dark">
+                    <h4>Need a Custom Solution?</h4>
+                    <p>
+                      Unlock your success with our exceptional and tailored
+                      solutions.
+                    </p>
+                    <small
+                      >Your Vision. Our Expertise. Solutions That Drive
+                      Results.</small
+                    >
+                    <a href="contact.html">Contact Us →</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <a
+                href="career.html"
+                style="
+                  color: #00fcf7;
+                  border-bottom: 2px solid #00fcf7;
+                  font-weight: 700;
+                "
+                >Career</a
+              >
+            </li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html"> Contact</a></li>
+          </ul>
+        </nav>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+    <!---- Nav Bar section ends -->
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div >
+        <h1>Graphics <span style="color: #00FCF7;"> Designer</span></h1>
+        <p>
+          Explore exciting career opportunities with us and be part of a dynamic environment where collaboration, respect, and innovation drive success. At ByteSoft Nepal, every voice matters, and creativity thrives. Discover our latest openings and take the next step in your career journey today!
+        </p>
+      </div>
+    </section>
+
+<!-- Career Detail Section (Responsive + AOS Animation + Matching UI) -->
+<section class="career-details" style="padding: 60px 20px; background: url('../Images/companies.png') no-repeat center/cover;">
+  <div style="max-width: 1200px; margin: auto; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.05); border-radius: 10px; overflow: hidden;" data-aos="fade-up">
+    <div style="padding: 30px; display: flex; flex-direction: column; gap: 25px;">
+      
+      <!-- Top Info Grid -->
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; row-gap: 12px; font-size: 0.95rem; color: #333;">
+        <div><strong>Position:</strong> Graphics Designer</div>
+        <div><strong>Employment Type:</strong> Full-Time (Onsite)</div>
+        <div><strong>Experience Level:</strong> Senior Graphics Designer</div>
+        <div><strong>Position Available:</strong> 1 Position</div>
+        <div><strong>Posting Date:</strong> June 20, 2025</div>
+        <div><strong>Apply Before:</strong> June 27, 2025</div>
+      </div>
+
+      <!-- Divider Line -->
+      <hr style="border: none; height: 1px; background-color: #e0e0e0; margin: 0;"/>
+
+      <!-- Job Details -->
+      <div>
+        <h3 style="margin-bottom: 10px; font-size: 1.3rem; color: #000;">Job Details</h3>
+        <p style="font-size: 1rem; color: #555; line-height: 1.6">
+          Lead and execute creative projects, overseeing design strategy and team collaboration. Play a crucial role in crafting innovative, visually impactful designs that meet client needs and elevate their brand presence.
+        </p>
+      </div>
+
+      <!-- Requirements -->
+      <div>
+        <h3 style="margin-bottom: 10px; font-size: 1.3rem; color: #000;">Requirements</h3>
+        <ul style="list-style: disc; padding-left: 20px; color: #555; line-height: 2;">
+          <li>Proficiency in Adobe Creative Suite (Photoshop, Illustrator, InDesign) and Figma.</li>
+          <li>Experience in branding, visual identity, and maintaining design consistency.</li>
+          <li>Strong creative thinking and ability to generate original design concepts.</li>
+          <li>Familiarity with UI/UX design principles for web and mobile platforms.</li>
+          <li>Keen attention to detail with a focus on flawless design execution.</li>
+          <li>Strong communication and collaboration skills with cross-functional teams.</li>
+        </ul>
+      </div>
+
+      <!-- Responsibilities -->
+      <div>
+        <h3 style="margin-bottom: 10px; font-size: 1.3rem; color: #000;">Responsibilities</h3>
+        <ul style="list-style: disc; padding-left: 20px; color: #555; line-height: 2;">
+          <li>Design engaging visuals for digital and print platforms, including websites and social media.</li>
+          <li>Collaborate with teams to develop and execute creative concepts that align with brand guidelines.</li>
+          <li>Create wireframes and mockups for web and mobile applications, focusing on UI/UX.</li>
+          <li>Revise and refine designs based on feedback to meet client and project goals.</li>
+          <li>Stay current with design trends to ensure innovative and competitive design solutions.</li>
+        </ul>
+      </div>
+<hr>
+      <!-- Contact Info -->
+      
+      <!-- Contact Info -->
+<div style="text-align: center; font-size: 1rem; color: #000;">
+  Please send us your CV at 
+  <strong>
+    <a href="mailto:info@bytesoftnepal.com" style="color: #032A63; text-decoration: none;">
+      info@bytesoftnepal.com
+    </a>
+  </strong>
+</div>
+
+
+      <!-- Bottom Info -->
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; font-size: 0.95rem; color: #333; margin-top: 20px;">
+        <span><strong>Salary:</strong> Negotiable</span>
+        <span><strong>Working Day:</strong> Sunday – Friday</span>
+        <span><strong>Working Hour:</strong> 8hr/D</span>
+      </div>
+    </div>
+  </div>
+</section>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section about">
+          <img
+            src="../Images/logo.png"
+            alt="Bytesoft Nepal Logo"
+            class="footer-logo"
+          />
+          <p>
+            ByteSoft Nepal delivers exceptional IT solutions, focused on solving
+            challenges and driving success. With a skilled team and a commitment
+            to quality, we ensure every project meets your needs and exceeds
+            expectations.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li>Web Development</li>
+            <li>Mobile App Development</li>
+            <li>Graphic Designing</li>
+            <li>Digital Marketing</li>
+            <li>Search Engine Optimization</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Important Links</h3>
+          <ul>
+            <li>About Us</li>
+            <li>Services</li>
+            <li>Career</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Find Us At</h3>
+          <div class="social-icons">
+            <a
+              href="https://www.facebook.com/profile.php?id=61567820104842"
+              target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/company/bytesoft-nepal/posts/?feedView=all"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <!-- <a href="#"><i class="fab fa-instagram"></i></a> -->
+          </div>
+          <ul class="contact-info">
+            <li>
+              <i class="fas fa-phone"></i>
+              <a
+                href="tel:+9779817189947"
+                style="text-decoration: none; color: white"
+                >9817189947</a
+              >
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a
+                href="mailto:info@bytesoftnepal.com"
+                style="text-decoration: none; color: white"
+                >info@bytesoftnepal.com</a
+              >
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <a
+                href="https://maps.app.goo.gl/K4DEuFBGxcMnogPAA"
+                target="_blank"
+                style="text-decoration: none; color: white"
+              >
+                Amarsingh, Kundahar Chowk, Pokhara -12
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        Copyright © 2025, All rights reserved - Bytesoft Nepal
+      </div>
+    </footer>
+
+    <!-- Go to Top Button -->
+    <button
+      id="goToTopButton"
+      class="go-to-top"
+      aria-label="Go to top"
+      onclick="scrollToTop()"
+      style="
+        display: none;
+        position: fixed;
+        bottom: 90px;
+        right: 30px;
+        background-color: #e6f0e3;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+      "
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+  </body>
+</html>
