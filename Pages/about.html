@@ -156,6 +156,138 @@
     .timeline {
       position: relative;
     }
+    
+    .how-we-work {
+      max-width: 1200px;
+  
+
+      padding: 0 20px;
+    }
+
+    .how-we-work h2 {
+      font-size: 32px;
+      text-align: center;
+      margin-top: 13%;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 16px;
+      color: #555;
+  
+    }
+
+    .step-container {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      margin-top: -5%;
+      padding: 20px;
+      width: 120%;
+      margin-left: -10%;
+  
+    
+
+    }
+
+    .step-img {
+      width: 40%;
+      margin-right: 20px;
+      margin-top: 25px;
+ 
+
+    }
+
+    .step-img img {
+      width: 100%;
+     
+    }
+
+    .step-connector {
+      position: relative;
+      width: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 20px;
+    }
+
+    .vertical-line {
+      width: 4px;
+      height: 150%;
+      background-color: #00FCF7;
+      position: absolute;
+      top: 10%;
+    }
+
+    .step-marker {
+      width: 20px;
+      height: 20px;
+      background-color: orange;
+      border-radius: 50%;
+      z-index: 2;
+    }
+
+    .step-label {
+      transform: rotate(-90deg);
+      transform-origin: left center;
+      color: #808080;
+      font-weight: 900;
+      font-size: 15px;
+      margin-top: 140px;
+    }
+
+    .step-text {
+      width: 110%;
+      background: #fff;
+      padding: 25px;
+      line-height: 1.6;
+      border-radius: 10px;
+ 
+    }
+
+    .step-text h3 {
+      font-size: 30px;
+      color: #00695c;
+      margin-bottom: 10px;
+    }
+
+    .step-text p {
+      font-size: 20px;
+      color: #444;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    @media (max-width: 768px) {
+      .step-container {
+        flex-direction: column;
+        align-items: center;
+      
+       
+      }
+
+      .step-img,
+      .step-text {
+        width: 100%;
+     
+      }
+
+      .step-connector {
+      display: none;
+
+      }
+      .step-label {
+        transform: rotate(0);
+        margin-left: 10px;
+      }
+
+      .vertical-line {
+        display: none;
+      }
+    }
+
 
 
   </style>
@@ -266,13 +398,34 @@
   </div>
 
 
-    <section class="how-we-work">
+   <section class="how-we-work">
     <h2>How We Work:</h2>
     <p class="subtitle">Transforming Ideas into Impact</p>
 
-    <div class="timeline">
-     
+    <!-- Step 1 -->
+    <div class="step-container">
+      <div class="step-img">
+        <img src="../Images/about-2.png" alt="Step 1" />
+      </div>
+
+      <div class="step-connector">
+        <div class="step-marker"></div>
+        <div class="vertical-line"></div>
+        <div class="step-label">Step 1</div>
+      </div>
+
+      <div class="step-text">
+        <h3>🍡 "From Concept to Clarity: The ByteSoft Way to Define!"</h3>
+        <p>
+          At ByteSoft Nepal, defining your project is where we lay the foundation for success.
+          We don’t just gather requirements—we immerse ourselves in your vision to turn ideas
+          into actionable plans. With in-depth research, strategy, and collaboration, we
+          transform your goals into a clear path forward, ensuring your project starts strong
+          and stays on track from day one.
+        </p>
+      </div>
     </div>
+
   </section>
 
 
