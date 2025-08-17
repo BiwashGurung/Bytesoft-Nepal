@@ -182,6 +182,83 @@
   }
 }
 
+
+
+
+
+
+
+
+    .what-sets-us-apart {
+      max-width: 1200px;
+      margin: auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .what-sets-us-apart h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .what-sets-us-apart > p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    /* Cards container */
+    .usp-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    /* Each card */
+    .usp-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .usp-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .usp-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .usp-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .usp-card p {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .what-sets-us-apart h2 {
+        font-size: 1.5rem;
+      }
+      .usp-card h3 {
+        font-size: 1rem;
+      }
+    }
+
+
     </style>
   </head>
   <body>
@@ -358,6 +435,49 @@
   </div>
 </section>
 
+
+
+
+
+
+
+
+
+
+<section class="what-sets-us-apart">
+    <h2>What Sets Us Apart?</h2>
+    <p>Reliable expertise, creative solutions, and a team that cares like it's their own.</p>
+
+    <div class="usp-cards">
+      <!-- Card 1 -->
+      <div class="usp-card custom-strategies">
+        <img src="https://via.placeholder.com/400x250?text=Custom+Strategies" alt="Custom Strategies">
+        <h3>Custom Strategies</h3>
+        <p>Every business is different — so are our plans. We design campaigns aligned with your unique goals.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="usp-card creative-analytical">
+        <img src="https://via.placeholder.com/400x250?text=Creative+%26+Analytical" alt="Creative & Analytical">
+        <h3>Creative & Analytical</h3>
+        <p>We blend compelling creatives with deep analytics to deliver campaigns that not only look good but perform well.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="usp-card performance-tracking">
+        <img src="https://via.placeholder.com/400x250?text=Performance+Tracking" alt="Performance Tracking">
+        <h3>Performance Tracking</h3>
+        <p>Real-time insights and clear reports keep you in the loop with measurable progress.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="usp-card partnership-mentality">
+        <img src="https://via.placeholder.com/400x250?text=Partnership+Mentality" alt="Partnership Mentality">
+        <h3>Partnership Mentality</h3>
+        <p>We treat your brand like our own — your success is our mission.</p>
+      </div>
+    </div>
+  </section>
 
 
 
