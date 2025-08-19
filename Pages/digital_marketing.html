@@ -132,11 +132,10 @@
   grid-row-start: 1;
 }
 
-/* Updated card styling — horizontal cards */
-/* Make the card a grid */
+
 .service-card{
   display: grid;
-  grid-template-columns: 110px 1fr; /* img | content */
+  grid-template-columns: 110px 1fr; 
   column-gap: 20px;
   row-gap: 8px;
 
@@ -144,12 +143,17 @@
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 0 12px rgba(0,0,0,.06);
-
-  /* don't justify headings; it caused the weird spacing you see */
-  text-align: left;
 }
 
-/* Image stays on the left and spans both rows */
+.service-card:hover {
+  box-shadow: 0 0 16px rgba(0,0,0,.1);
+  transform: translateY(-4px);
+  transition: all .3s ease;
+  scale: 1.02;
+  cursor: pointer;
+}
+
+
 .service-card img{
   grid-row: 1 / span 2;
   width: 99px;
@@ -158,20 +162,20 @@
   align-self: start;
 }
 
-/* Key trick: flatten the wrapper so its children become grid items */
+
 .card-content{
-  display: contents;           /* <- makes h3 and p direct grid children */
+  display: contents;           
 }
 
 .card-content h3{
-  grid-column: 2;              /* beside the image */
+  grid-column: 2;             
   margin: 0 0 8px 0;
   font-size: 1.8rem;
   color: #111;
 }
 
 .card-content p{
-  grid-column: 1 / -1;         /* span full card width under both columns */
+  grid-column: 1 / -1;         
   margin: 0;
   font-size: .95rem;
   color: #555;
