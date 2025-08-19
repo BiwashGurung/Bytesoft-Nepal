@@ -133,37 +133,54 @@
 }
 
 /* Updated card styling — horizontal cards */
-.service-card {
-  background-color: #fff;
+/* Make the card a grid */
+.service-card{
+  display: grid;
+  grid-template-columns: 110px 1fr; /* img | content */
+  column-gap: 20px;
+  row-gap: 8px;
+
+  background: #fff;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.06);
-  display: flex;
-  flex-direction: row;
-  
-  gap: 20px;
-  text-align: justify;
-  min-height: 160px;
+  box-shadow: 0 0 12px rgba(0,0,0,.06);
+
+  /* don't justify headings; it caused the weird spacing you see */
+  text-align: left;
 }
 
-.service-card img {
+/* Image stays on the left and spans both rows */
+.service-card img{
+  grid-row: 1 / span 2;
   width: 99px;
   height: 70px;
   object-fit: contain;
-  flex-shrink: 0;
+  align-self: start;
 }
 
-.card-content h3 {
+/* Key trick: flatten the wrapper so its children become grid items */
+.card-content{
+  display: contents;           /* <- makes h3 and p direct grid children */
+}
+
+.card-content h3{
+  grid-column: 2;              /* beside the image */
+  margin: 0 0 8px 0;
   font-size: 1.8rem;
-  margin-bottom: 8px;
   color: #111;
 }
 
-.card-content p {
-  font-size: 0.95rem;
+.card-content p{
+  grid-column: 1 / -1;         /* span full card width under both columns */
+  margin: 0;
+  font-size: .95rem;
   color: #555;
   line-height: 1.5;
+
+  text-align: justify;
 }
+
+
 
 /* Responsive layout */
 @media (max-width: 992px) {
@@ -394,7 +411,7 @@
 
 
     <section class="digital-services-grid">
-      <h2 data-aos="fade-up">Our Digital Marketing Services</h2>
+      <h2 data-aos="fade-in">Our Digital Marketing Services</h2>
        <p class="subheading" data-aos="zoom-in">
       We offer a range of dynamic services to grow your digital footprint and maximize your ROI
     </p>
